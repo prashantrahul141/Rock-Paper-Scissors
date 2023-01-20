@@ -1,7 +1,23 @@
+import Score from '@components/room/score';
+import StatusText from '@components/room/statustext';
 import type { NextPage } from 'next';
+import { useState } from 'react';
+import TypeStatusText from 'src/types/types';
 
 const RoomPage: NextPage = () => {
-  return <></>;
+  const [currentScore, setCurrentScore] = useState(0);
+  const [currentStatus, setCurrentState] = useState(
+    TypeStatusText.WAITING_FOR_PLAYER
+  );
+
+  return (
+    <div className='flex flex-col items-center justify-center'>
+      <Score score={currentScore}></Score>
+      <div className='mt-12'>
+        <StatusText statustext={currentStatus}></StatusText>
+      </div>
+    </div>
+  );
 };
 
 export default RoomPage;
