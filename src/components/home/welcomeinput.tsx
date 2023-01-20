@@ -1,9 +1,11 @@
+import { useRouter } from 'next/router';
 import type { ChangeEvent, FC } from 'react';
 import { useState } from 'react';
 
 const WelcomeInput: FC = () => {
   const [disableButton, setDisableButton] = useState(true);
   const [inputValue, setInputValue] = useState('');
+  const router = useRouter();
 
   const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const trimmedValue = e.target.value.trim();
@@ -21,9 +23,12 @@ const WelcomeInput: FC = () => {
         type={'text'}
         onChange={inputHandler}
         className='input flex-grow'
-        placeholder='Room number'></input>
+        placeholder='Room id'></input>
       <div className='flex items-center justify-center'>
-        <button disabled={disableButton} className='btn h-fit w-fit'>
+        <button
+          disabled={disableButton}
+          onClick={() => router.push(`/${inputValue}`)}
+          className='btn h-fit w-fit'>
           Join!
         </button>
       </div>
