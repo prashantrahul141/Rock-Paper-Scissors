@@ -8,7 +8,7 @@ module.exports = {
       },
       fontFamily: {
         bebasNeue: ['Bebas Neue'],
-        inconsolata: ['Inconsolata monospace'],
+        inconsolata: ['Inconsolata'],
       },
       colors: {
         themePrimary: {
