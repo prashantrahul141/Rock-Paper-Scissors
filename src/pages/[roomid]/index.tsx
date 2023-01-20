@@ -1,3 +1,4 @@
+import Choices from '@components/room/choices';
 import Score from '@components/room/score';
 import StatusText from '@components/room/statustext';
 import type { NextPage } from 'next';
@@ -16,6 +17,7 @@ const RoomPage: NextPage = () => {
       <div className='mt-12'>
         <StatusText statustext={currentStatus}></StatusText>
       </div>
+      <Choices disabled={false}></Choices>
     </div>
   );
 };
