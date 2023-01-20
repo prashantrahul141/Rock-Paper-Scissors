@@ -16,7 +16,7 @@
 
 @layer components {
   .btn {
-    @apply w-full max-w-xs rounded-md bg-themePrimary-400 px-3 py-1 font-inconsolata tracking-wide text-themePrimary-50 transition-all  hover:bg-themePrimary-300 disabled:cursor-not-allowed  disabled:bg-themePrimary-600/50 disabled:text-themePrimary-50/40;
+    @apply w-full max-w-xs select-none rounded-md bg-themePrimary-400 px-3 py-1 font-inconsolata tracking-wide text-themePrimary-50 transition-all  hover:bg-themePrimary-300 disabled:cursor-not-allowed  disabled:bg-themePrimary-600/50 disabled:text-themePrimary-50/40;
   }
 
   .input {
