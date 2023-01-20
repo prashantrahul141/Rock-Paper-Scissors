@@ -7,10 +7,10 @@ import BackgroundGradient from '@components/common/backgroundgradient';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className='fixed top-0 left-0 h-screen w-screen'>
+    <>
       <BackgroundGradient></BackgroundGradient>
       <Component {...pageProps} />;
-    </div>
+    </>
   );
 };
 
