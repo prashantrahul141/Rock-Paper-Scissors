@@ -4,6 +4,7 @@ const Welcome: FC = () => {
   return (
     <div className='absolute flex h-screen w-screen items-center justify-center'>
       <div className='h-max w-96 max-w-full'>
+        {/* Title */}
         <div className='flex h-full w-full items-center justify-center'>
           <div className='mb-20 grid text-left text-6xl tracking-wide sm:mb-40 sm:flex sm:gap-4'>
             <span className='font-secularOne text-themePrimary-50'>Rock</span>
@@ -14,6 +15,7 @@ const Welcome: FC = () => {
           </div>
         </div>
 
+        {/* input  */}
         <div className='flex gap-4'>
           <input className='input flex-grow' placeholder='Room number'></input>
           <div className='flex items-center justify-center'>
@@ -21,6 +23,7 @@ const Welcome: FC = () => {
           </div>
         </div>
 
+        {/* bottom buttons */}
         <div className='mt-10 flex items-center justify-center gap-4'>
           <button className='btn w-fit'>Create room!</button>
           <button className='btn flex w-fit border border-themePrimary-300 bg-transparent hover:bg-themePrimary-200/20'>
