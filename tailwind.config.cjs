@@ -7,6 +7,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       fontFamily: {
+        secularOne: ['Secular One'],
         bebasNeue: ['Bebas Neue'],
         inconsolata: ['Inconsolata'],
       },
