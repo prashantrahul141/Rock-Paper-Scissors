@@ -3,6 +3,10 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        bebasNeue: ['Bebas Neue'],
+        inconsolata: ['Inconsolata monospace'],
+      },
       colors: {
         themePrimary: {
           50: '#dbeaff',
