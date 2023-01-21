@@ -6,3 +6,17 @@ datasource db {
     provider = "sqlite"
     url      = env("DATABASE_URL")
 }
+
+model User {
+    userId       String @id @default(cuid())
+    joinedRoomId String
+    Wins         String
+
+    Room       Room?   @relation(fields: [roomRoomId], references: [roomId])
+    roomRoomId String?
+}
+
+model Room {
+    roomId String @id @default(cuid())
+    users  User[]
+}
