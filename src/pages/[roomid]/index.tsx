@@ -1,3 +1,4 @@
+import HeadComp from '@components/common/headcomponent';
 import Choices from '@components/room/choices';
 import Score from '@components/room/score';
 import StatusText from '@components/room/statustext';
@@ -12,13 +13,16 @@ const RoomPage: NextPage = () => {
   );
 
   return (
-    <div className='flex flex-col items-center justify-center'>
-      <Score score={currentScore}></Score>
-      <div className='mt-12'>
-        <StatusText statustext={currentStatus}></StatusText>
+    <>
+      <HeadComp headTitle='Playing'></HeadComp>
+      <div className='flex flex-col items-center justify-center'>
+        <Score score={currentScore}></Score>
+        <div className='mt-12'>
+          <StatusText statustext={currentStatus}></StatusText>
+        </div>
+        <Choices disabled={false}></Choices>
       </div>
-      <Choices disabled={false}></Choices>
-    </div>
+    </>
   );
 };
 
