@@ -10,7 +10,7 @@ datasource db {
 model User {
     userId       String @id @default(cuid())
     joinedRoomId String
-    Wins         String
+    Wins         Int
 
     Room       Room?   @relation(fields: [roomRoomId], references: [roomId])
     roomRoomId String?
