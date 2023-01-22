@@ -15,7 +15,7 @@ const ChoiceButton: FC<{ color: string; icon: string; disabled: boolean }> = ({
         disabled ? 'opacity-60' : 'opacity-100'
       }`}>
       <div className='absolute transition-all duration-200 ease-in-out'>
-        <span className='absolute -translate-x-1/2 -translate-y-1/2 text-3xl'>
+        <span className='absolute -translate-x-1/2 -translate-y-1/2 text-4xl'>
           {icon}
         </span>
       </div>
