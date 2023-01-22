@@ -10,16 +10,14 @@ const WelcomeInput: FC = () => {
   const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const trimmedValue = e.target.value.trim();
     setInputValue(trimmedValue);
-    trimmedValue.length === 6
-      ? setDisableButton(false)
-      : setDisableButton(true);
+    trimmedValue.length > 8 ? setDisableButton(false) : setDisableButton(true);
   };
 
   return (
     <div className='flex gap-4'>
       <input
-        min={5}
-        max={6}
+        min={8}
+        max={20}
         type={'text'}
         onChange={inputHandler}
         className='input flex-grow'
