@@ -2,7 +2,9 @@ import HeadComp from '@components/common/headcomponent';
 import Choices from '@components/room/choices';
 import Score from '@components/room/score';
 import StatusText from '@components/room/statustext';
+import { api } from '@utils/api';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import TypeStatusText from 'src/types/types';
 
@@ -11,6 +13,8 @@ const RoomPage: NextPage = () => {
   const [currentStatus, setCurrentState] = useState(
     TypeStatusText.WAITING_FOR_PLAYER
   );
+  const router = useRouter();
+  const joinRoomMutation = api.mainRouter.joinRoom.useMutation();
 
   return (
     <>
